@@ -1,0 +1,18 @@
+.page-main {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.page-main__promo {
+  margin-bottom: 70px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 195px;
+  }
+}
+
+.page-main__advantages {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}

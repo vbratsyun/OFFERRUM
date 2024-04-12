@@ -1,0 +1,65 @@
+.advantages {
+  position: relative;
+  padding: 43px 0 119px;
+  border-radius: 20px;
+  background-color: $background-color;
+  z-index: -2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -30px;
+    width: 87px;
+    height: 87px;
+    background-image: linear-gradient(165deg, #dea8ff, #9d6ad9, #7a2bf6);
+    border-radius: 50%;
+    box-shadow: -40px 0 137px 0 #5f38ff;
+
+    @media (min-width: $desktop-width) {
+      width: 151px;
+      height: 151px;
+      top: -90px;
+      right: 119px;
+      box-shadow: -40px 270px 226px 0 #5f38ff, -40px 270px 226px 0 #ff0ede;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 38px 0 102px;
+    max-width: 698px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1284px;
+    padding: 132px 0 154px;
+  }
+}
+
+.advantages__list {
+  @media (min-width: $tablet-width) {
+    margin: 0 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+  }
+}
+
+.advantages__title {
+  font-size: 23px;
+  font-weight: 600;
+  color: $color-white;
+  width: 57%;
+  text-align: center;
+  margin: 0 auto 32px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 45px;
+    margin: 0 auto 65px;
+  }
+}
