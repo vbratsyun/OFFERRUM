@@ -1,0 +1,125 @@
+.page-nav__toggle {
+  display: block;
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  width: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 16px;
+    width: 40px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: $color-white;
+    box-shadow: 0 13px 0 0 $color-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-nav__wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 95%;
+  margin-left: 16px;
+  padding-top: 115px;
+  background-color: #293344;
+  border-bottom-left-radius: 20px;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 0;
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 15px 127px;
+  }
+}
+
+.page-nav__list {
+  margin-bottom: 90px;
+  margin-left: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-nav__user-login {
+  margin-bottom: 60px;
+  margin-left: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-nav--opened .page-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 41px;
+    right: 24px;
+    width: 30px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: $color-white;
+    box-shadow: 0 13px 0 0 $color-white;
+    z-index: 2;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    box-shadow: none;
+  }
+}
+
+.page-nav--opened .page-nav__wrapper {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-nav--closed .page-nav__wrapper {
+    display: block;
+  }
+
+  .page-nav--opened .page-nav__toggle {
+    display: none;
+  }
+}
+
+.page-nav--nojs .page-nav__toggle {
+  display: none;
+}
+
+.page-nav--nojs .page-nav__wrapper {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}

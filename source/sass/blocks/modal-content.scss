@@ -1,0 +1,32 @@
+.modal-content {
+  position: relative;
+  color: $color-white;
+  z-index: 1;
+}
+
+.modal-content__title {
+  position: relative;
+  top: 9px;
+  font-size: 23px;
+  margin: 0 0 25px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 45px;
+    letter-spacing: -1px;
+    margin: 0 0 25px;
+  }
+}
+
+.modal-content__description {
+  font-size: 18px;
+  margin: 0 0 25px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 460px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    margin: 0 0 35px;
+  }
+}

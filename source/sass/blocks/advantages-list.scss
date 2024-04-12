@@ -1,0 +1,280 @@
+.advantages-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 52px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -26px;
+    left: 22px;
+    width: 22px;
+    height: 22px;
+    background-image: linear-gradient(
+      139deg,
+      #06f6c7 15%,
+      #0fc1d7 30%,
+      #045dfa
+    );
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      left: -25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 87px;
+      height: 87px;
+      top: -141px;
+      left: -147px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    right: 12px;
+    width: 63px;
+    height: 63px;
+    background-image: linear-gradient(165deg, #dea8ff, #9d6ad9, #7a2bf6);
+    border-radius: 50%;
+    box-shadow: -40px 270px 226px 0 #5f38ff, -40px 270px 226px 0 #ff0ede;
+    filter: blur(7px);
+
+    @media (min-width: $tablet-width) {
+      right: -53px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -153px;
+      bottom: -24px;
+      width: 132px;
+      height: 132px;
+      box-shadow: -880px -70px 226px 0 #5f38ff, -880px -70px 226px 0 #ff0ede;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 55px 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 650px;
+    gap: 71px 45px;
+  }
+}
+
+.advantages-list__item {
+  position: relative;
+  width: 260px;
+  min-height: 273px;
+  margin: 0 auto;
+  background-color: #333e51;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 90px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 87%;
+    height: 79%;
+    background-color: rgb(51, 62, 81, 0.6);
+    border-radius: 20px;
+    z-index: -1;
+
+    @media (min-width: $desktop-width) {
+      width: 260px;
+      height: 268px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    align-items: baseline;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 300px;
+    min-height: 310px;
+
+    &--know-holder {
+      order: 4;
+    }
+
+    &--plan {
+      order: 3;
+    }
+
+    &--additionally {
+      order: 2;
+    }
+  }
+}
+
+.advantages-list__text {
+  color: $color-white;
+  text-align: center;
+  letter-spacing: -0.7px;
+  line-height: 155%;
+  margin: 0 auto;
+  padding: 171px 23px 10px;
+
+  &--open-wallet {
+    padding-top: 150px;
+  }
+
+  &--open-wallet::before,
+  &--know-holder::before,
+  &--plan::before,
+  &--additionally::before {
+    content: "";
+    position: absolute;
+    top: 53px;
+    left: 74px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &--open-wallet::before {
+    width: 135px;
+    height: 135px;
+    top: 21px;
+    left: 65px;
+    background-image: url("../../img/emoji-1.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/emoji-1@2x.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 169px;
+      height: 169px;
+      background-image: url("../../img/emoji-1-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/emoji-1-desktop@2x.png");
+      }
+    }
+  }
+
+  &--know-holder::before {
+    width: 111px;
+    height: 111px;
+    background-image: url("../../img/emoji-2.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/emoji-2@2x.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 145px;
+      height: 145px;
+      top: -133px;
+      background-image: url("../../img/emoji-2-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/emoji-2-desktop@2x.png");
+      }
+    }
+  }
+
+  &--plan::before {
+    width: 129px;
+    height: 129px;
+    top: 44px;
+    left: 65px;
+    background-image: url("../../img/emoji-3.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/emoji-3@2x.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 160px;
+      height: 160px;
+      top: -130px;
+      background-image: url("../../img/emoji-3-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/emoji-3-desktop@2x.png");
+      }
+    }
+  }
+
+  &--additionally::before {
+    width: 113px;
+    height: 113px;
+    background-image: url("../../img/emoji-4.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/emoji-4@2x.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 147px;
+      height: 147px;
+      top: -97px;
+      background-image: url("../../img/emoji-4-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/emoji-4-desktop@2x.png");
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 150px 23px 10px;
+
+    &--open-wallet::before,
+    &--know-holder::before,
+    &--plan::before,
+    &--additionally::before {
+      top: 40px;
+    }
+
+    &--know-holder::before,
+    &--additionally::before {
+      top: 50px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 19px;
+    line-height: 130%;
+    padding: 190px 22px 50px;
+
+    &--know-holder {
+      padding-top: 169px;
+      width: 243px;
+    }
+
+    &--plan {
+      padding-top: 169px;
+      width: 261px;
+    }
+
+    &--open-wallet::before,
+    &--know-holder::before {
+      top: 18px;
+    }
+
+    &--plan::before {
+      top: 9px;
+      left: 73px;
+    }
+
+    &--additionally::before {
+      top: 33px;
+    }
+  }
+}

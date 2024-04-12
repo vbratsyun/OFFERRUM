@@ -1,0 +1,33 @@
+.nav-list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-self: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 15px 107px;
+  }
+}
+
+.nav-list__item:not(:last-of-type) {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.nav-list__link {
+  font-size: 23px;
+  color: $color-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 23px;
+  }
+}
